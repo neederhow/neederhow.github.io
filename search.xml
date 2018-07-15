@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[ubuntu美化记录]]></title>
     <url>%2F2018%2F07%2F16%2Fubuntu-be-pretty%2F</url>
-    <content type="text"><![CDATA[pre 关于Ubuntu美化、个人定制、常用软件安装的记录 美化修改登录页面背景编辑 /etc/alternatives/gdm3.css 文件， 找到 1234#lockDialogGroup &#123; background: #2c001e url(resource:///org/gnome/shell/theme/noise-texture.png); background-repeat: repeat;&#125; 修改为 123456#lockDialogGroup &#123; background: #2c001e url(file:///path/to/the/picture/you/want/to.use); background-repeat: no-repeat; background-size: cover; background-position: center;&#125; 重启。]]></content>
+    <content type="text"><![CDATA[pre 关于Ubuntu美化、个人定制、常用软件安装的记录 美化修改登录页面背景编辑 /etc/alternatives/gdm3.css 文件， 找到 1234#lockDialogGroup &#123; background: #2c001e url(resource:///org/gnome/shell/theme/noise-texture.png); background-repeat: repeat;&#125; 修改为 123456#lockDialogGroup &#123; background: #2c001e url(file:///path/to/the/picture/you/want/to.use); background-repeat: no-repeat; background-size: cover; background-position: center;&#125; 重启。 参考资料 Ubuntu18.04 更改登录界面默认背景图]]></content>
       <categories>
         <category>备忘</category>
       </categories>
