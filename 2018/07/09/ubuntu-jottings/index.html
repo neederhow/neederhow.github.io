@@ -92,11 +92,11 @@
 <meta name="keywords" content="linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu杂记">
-<meta property="og:url" content="http://yoursite.com/2018/07/09/ubuntu-jottings/index.html">
+<meta property="og:url" content="http://neederhow.com/2018/07/09/ubuntu-jottings/index.html">
 <meta property="og:site_name" content="给自己的备忘录">
 <meta property="og:description" content="pre 基于Ubuntu记一些关于Linux使用的内容">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-15T19:30:13.787Z">
+<meta property="og:updated_time" content="2018-08-06T17:49:57.872Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu杂记">
 <meta name="twitter:description" content="pre 基于Ubuntu记一些关于Linux使用的内容">
@@ -129,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/09/ubuntu-jottings/"/>
+  <link rel="canonical" href="http://neederhow.com/2018/07/09/ubuntu-jottings/"/>
 
 
 
@@ -328,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/09/ubuntu-jottings/">
+    <link itemprop="mainEntityOfPage" href="http://neederhow.com/2018/07/09/ubuntu-jottings/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Decret Ni">
@@ -357,7 +357,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-09T21:51:17+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-09T21:51:00+08:00">
                 2018-07-09
               </time>
             
@@ -575,8 +575,9 @@
 <h4 id="pkill"><a href="#pkill" class="headerlink" title="pkill"></a>pkill</h4><p>pkill命令可以按照进程名杀死进程。pkill和killall应用方法差不多，也是直接杀死运行中的程序；如果您想杀掉单个进程，请用kill来杀掉。</p>
 <p><strong>语法</strong><br><code>pkill(选项)(参数)</code><br><strong>选项</strong></p>
 <blockquote>
-<p>-o：仅向找到的最小（起始）进程号发送信号；<br>-n：仅向找到的最大（结束）进程号发送信号；<br>-P：指定父进程号发送信号；<br>-g：指定进程组；<br>-t：指定开启进程的终端。<br><strong>参数</strong><br><code>进程名称：指定要查找的进程名称，同时也支持类似grep指令中的匹配模式。</code></p>
+<p>-o：仅向找到的最小（起始）进程号发送信号；<br>-n：仅向找到的最大（结束）进程号发送信号；<br>-P：指定父进程号发送信号；<br>-g：指定进程组；<br>-t：指定开启进程的终端。</p>
 </blockquote>
+<p><strong>参数</strong><br><code>进程名称：指定要查找的进程名称，同时也支持类似grep指令中的匹配模式。</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">~ pgrep -l gaim</span><br><span class="line">2979 gaim</span><br><span class="line">~ pkill gaim</span><br></pre></td></tr></table></figure>
 <p>也就是说：<strong>kill对应的是PID，pkill对应的是command</strong>。</p>
 <h3 id="关于kill-9-pid无法强制杀掉进程的问题"><a href="#关于kill-9-pid无法强制杀掉进程的问题" class="headerlink" title="关于kill -9 pid无法强制杀掉进程的问题"></a>关于kill -9 pid无法强制杀掉进程的问题</h3><p>某些进程无法强制杀死</p>
@@ -597,7 +598,7 @@
 <h1 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h1><h2 id="IDEA无法更新"><a href="#IDEA无法更新" class="headerlink" title="IDEA无法更新"></a>IDEA无法更新</h2><p>更新时提示<br>IDEA does not have write access to /path/to/idea. Please run it by a privileged user to update<br>使用下面命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R <span class="variable">$USER</span>: <span class="variable">$USER</span> /opt/path/to/idea</span><br></pre></td></tr></table></figure></p>
 <p>把目录的与拥有者改为当前用户</p>
 <hr>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote>
 <p><a href="http://man.linuxde.net" target="_blank" rel="noopener">Linux命令大全</a>: <a href="http://man.linuxde.net" target="_blank" rel="noopener">http://man.linuxde.net</a></p>
 <hr>
 <p>后台运行<br><a href="https://blog.csdn.net/liuyanfeier/article/details/62422742" target="_blank" rel="noopener">linux后台执行命令：&amp;和nohup</a>: <a href="https://blog.csdn.net/liuyanfeier/article/details/62422742" target="_blank" rel="noopener">https://blog.csdn.net/liuyanfeier/article/details/62422742</a><br><a href="https://www.cnblogs.com/kaituorensheng/p/3980334.html" target="_blank" rel="noopener">linux后台运行和关闭、查看后台任务</a>: <a href="https://www.cnblogs.com/kaituorensheng/p/3980334.html" target="_blank" rel="noopener">https://www.cnblogs.com/kaituorensheng/p/3980334.html</a></p>
@@ -629,10 +630,10 @@
       <span>本文标题:</span><a href="/2018/07/09/ubuntu-jottings/">Ubuntu杂记</a></br>
       <span>文章作者:</span><a href="/" title="访问 Decret Ni 的个人博客">Decret Ni</a></br>
       <span>发布时间:</span>2018年07月09日 - 21:07</br>
-      <span>最后更新:</span>2018年07月16日 - 03:07</br>
+      <span>最后更新:</span>2018年08月07日 - 01:08</br>
       <span>
-	    <b>本文地址：</b><a href="/2018/07/09/ubuntu-jottings/" title="Ubuntu杂记">http://yoursite.com/2018/07/09/ubuntu-jottings/</a><br/><b>转载请注明出处，谢谢！</b>
-      <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/07/09/ubuntu-jottings/"  aria-label="复制成功！"></i></span>
+	    <b>本文地址：</b><a href="/2018/07/09/ubuntu-jottings/" title="Ubuntu杂记">http://neederhow.com/2018/07/09/ubuntu-jottings/</a><br/><b>转载请注明出处，谢谢！</b>
+      <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://neederhow.com/2018/07/09/ubuntu-jottings/"  aria-label="复制成功！"></i></span>
 	    </span></br>
       <b>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a>国际许可协议发布</b></br>
 	    </p>
@@ -888,7 +889,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#pre"><span class="nav-number">1.</span> <span class="nav-text">pre</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#命令"><span class="nav-number"></span> <span class="nav-text">命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件与目录"><span class="nav-number">1.</span> <span class="nav-text">文件与目录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#chmod"><span class="nav-number">1.1.</span> <span class="nav-text">chmod</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chown"><span class="nav-number">1.2.</span> <span class="nav-text">chown</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后台运行"><span class="nav-number">2.</span> <span class="nav-text">后台运行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#amp"><span class="nav-number">2.1.</span> <span class="nav-text">&amp;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ctrl-z"><span class="nav-number">2.2.</span> <span class="nav-text">ctrl + z</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jobs"><span class="nav-number">2.3.</span> <span class="nav-text">jobs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fg"><span class="nav-number">2.4.</span> <span class="nav-text">fg</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bg"><span class="nav-number">2.5.</span> <span class="nav-text">bg</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nohup"><span class="nav-number">2.6.</span> <span class="nav-text">nohup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ctrl-c"><span class="nav-number">2.7.</span> <span class="nav-text">Ctrl+c</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kill"><span class="nav-number">2.8.</span> <span class="nav-text">kill</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程查与杀"><span class="nav-number">3.</span> <span class="nav-text">进程查与杀</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查"><span class="nav-number">3.1.</span> <span class="nav-text">查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ps"><span class="nav-number">3.1.1.</span> <span class="nav-text">ps</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#用-与grep、more等连用进行筛选、分页"><span class="nav-number">3.1.1.0.1.</span> <span class="nav-text">用|与grep、more等连用进行筛选、分页</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#ps-gt-file将结果输出的file文件"><span class="nav-number">3.1.1.0.2.</span> <span class="nav-text">ps &gt; file将结果输出的file文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pidof"><span class="nav-number">3.1.2.</span> <span class="nav-text">pidof</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pgrep"><span class="nav-number">3.1.3.</span> <span class="nav-text">pgrep</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pstree"><span class="nav-number">3.1.4.</span> <span class="nav-text">pstree</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#杀"><span class="nav-number">3.2.</span> <span class="nav-text">杀</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#kill-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">kill</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#killall"><span class="nav-number">3.2.2.</span> <span class="nav-text">killall</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pkill"><span class="nav-number">3.2.3.</span> <span class="nav-text">pkill</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于kill-9-pid无法强制杀掉进程的问题"><span class="nav-number">3.3.</span> <span class="nav-text">关于kill -9 pid无法强制杀掉进程的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#杀死僵尸进程"><span class="nav-number">3.3.1.</span> <span class="nav-text">杀死僵尸进程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#查-1"><span class="nav-number">3.3.1.1.</span> <span class="nav-text">查</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#杀-1"><span class="nav-number">3.3.1.2.</span> <span class="nav-text">杀</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些问题"><span class="nav-number"></span> <span class="nav-text">一些问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IDEA无法更新"><span class="nav-number">1.</span> <span class="nav-text">IDEA无法更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">2.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#pre"><span class="nav-number">1.</span> <span class="nav-text">pre</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#命令"><span class="nav-number"></span> <span class="nav-text">命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件与目录"><span class="nav-number">1.</span> <span class="nav-text">文件与目录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#chmod"><span class="nav-number">1.1.</span> <span class="nav-text">chmod</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chown"><span class="nav-number">1.2.</span> <span class="nav-text">chown</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后台运行"><span class="nav-number">2.</span> <span class="nav-text">后台运行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#amp"><span class="nav-number">2.1.</span> <span class="nav-text">&amp;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ctrl-z"><span class="nav-number">2.2.</span> <span class="nav-text">ctrl + z</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jobs"><span class="nav-number">2.3.</span> <span class="nav-text">jobs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fg"><span class="nav-number">2.4.</span> <span class="nav-text">fg</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bg"><span class="nav-number">2.5.</span> <span class="nav-text">bg</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nohup"><span class="nav-number">2.6.</span> <span class="nav-text">nohup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ctrl-c"><span class="nav-number">2.7.</span> <span class="nav-text">Ctrl+c</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kill"><span class="nav-number">2.8.</span> <span class="nav-text">kill</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程查与杀"><span class="nav-number">3.</span> <span class="nav-text">进程查与杀</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查"><span class="nav-number">3.1.</span> <span class="nav-text">查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ps"><span class="nav-number">3.1.1.</span> <span class="nav-text">ps</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#用-与grep、more等连用进行筛选、分页"><span class="nav-number">3.1.1.0.1.</span> <span class="nav-text">用|与grep、more等连用进行筛选、分页</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#ps-gt-file将结果输出的file文件"><span class="nav-number">3.1.1.0.2.</span> <span class="nav-text">ps &gt; file将结果输出的file文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pidof"><span class="nav-number">3.1.2.</span> <span class="nav-text">pidof</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pgrep"><span class="nav-number">3.1.3.</span> <span class="nav-text">pgrep</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pstree"><span class="nav-number">3.1.4.</span> <span class="nav-text">pstree</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#杀"><span class="nav-number">3.2.</span> <span class="nav-text">杀</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#kill-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">kill</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#killall"><span class="nav-number">3.2.2.</span> <span class="nav-text">killall</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pkill"><span class="nav-number">3.2.3.</span> <span class="nav-text">pkill</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于kill-9-pid无法强制杀掉进程的问题"><span class="nav-number">3.3.</span> <span class="nav-text">关于kill -9 pid无法强制杀掉进程的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#杀死僵尸进程"><span class="nav-number">3.3.1.</span> <span class="nav-text">杀死僵尸进程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#查-1"><span class="nav-number">3.3.1.1.</span> <span class="nav-text">查</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#杀-1"><span class="nav-number">3.3.1.2.</span> <span class="nav-text">杀</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些问题"><span class="nav-number"></span> <span class="nav-text">一些问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IDEA无法更新"><span class="nav-number">1.</span> <span class="nav-text">IDEA无法更新</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number"></span> <span class="nav-text">参考资料</span></a></div>
             
 
           </div>
